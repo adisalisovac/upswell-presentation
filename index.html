@@ -413,10 +413,10 @@
   .p-card:nth-child(1) .num   { background: #8b5cf6; }
   .p-card:nth-child(2) .p-tag { background: #f3f0ff; color: #5b21b6; }
   .p-card:nth-child(2) .num   { background: #7c3aed; }
-  .p-card:nth-child(3) .p-tag { background: #eff6ff; color: #1d4ed8; }
-  .p-card:nth-child(3) .num   { background: #0ea5e9; }
-  .p-card:nth-child(4) .p-tag { background: #fdf2f8; color: #9d174d; }
-  .p-card:nth-child(4) .num   { background: #ec4899; }
+  .p-card:nth-child(3) .p-tag { background: #fdf2f8; color: #9d174d; }
+  .p-card:nth-child(3) .num   { background: #ec4899; }
+  .p-card:nth-child(4) .p-tag { background: #eff6ff; color: #1d4ed8; }
+  .p-card:nth-child(4) .num   { background: #0ea5e9; }
   .p-card:nth-child(5) .p-tag { background: #ecfdf5; color: #065f46; }
   .p-card:nth-child(5) .num   { background: #10b981; }
   .p-card:nth-child(6) .p-tag { background: #fffbf0; color: #92400e; }
@@ -540,26 +540,13 @@
     <div class="person-card emina">
       <div class="person-top">
         <span>👩‍💼</span>
-        <h4>Emina</h4>
+        <h4>PM</h4>
       </div>
       <p class="role">Product Manager</p>
       <ul>
         <li>Extracts business rules</li>
         <li>Writes + approves spec</li>
         <li>Owns acceptance criteria</li>
-      </ul>
-    </div>
-
-    <div class="person-card kristijan">
-      <div class="person-top">
-        <span>👨‍💻</span>
-        <h4>Kristijan</h4>
-      </div>
-      <p class="role">Tech Lead</p>
-      <ul>
-        <li>Extracts architecture</li>
-        <li>Writes + approves plan</li>
-        <li>Runs post-build check</li>
       </ul>
     </div>
 
@@ -574,6 +561,19 @@
         <li>Validates with client</li>
         <li>Handoff to dev</li>
         <li>Reviews implementation</li>
+      </ul>
+    </div>
+
+    <div class="person-card kristijan">
+      <div class="person-top">
+        <span>👨‍💻</span>
+        <h4>TL</h4>
+      </div>
+      <p class="role">Tech Lead</p>
+      <ul>
+        <li>Extracts architecture</li>
+        <li>Writes + approves plan</li>
+        <li>Runs post-build check</li>
       </ul>
     </div>
 
@@ -617,28 +617,28 @@
     <div class="pipe-step">
       <div class="pipe-circle c1">1</div>
       <div class="pipe-label">Analyze</div>
-      <div class="pipe-sub">Emina + Kristijan</div>
+      <div class="pipe-sub">PM + TL</div>
     </div>
     <div class="pipe-connector"></div>
 
     <div class="pipe-step">
       <div class="pipe-circle c2">2</div>
       <div class="pipe-label">Specify</div>
-      <div class="pipe-sub">Emina ✓</div>
-    </div>
-    <div class="pipe-connector"></div>
-
-    <div class="pipe-step">
-      <div class="pipe-circle c3">3</div>
-      <div class="pipe-label">Plan</div>
-      <div class="pipe-sub">Kristijan ✓</div>
+      <div class="pipe-sub">PM ✓</div>
     </div>
     <div class="pipe-connector"></div>
 
     <div class="pipe-step designer-step">
-      <div class="pipe-circle c4">4</div>
+      <div class="pipe-circle c4">3</div>
       <div class="pipe-label">Design</div>
       <div class="pipe-sub">Designer ✓</div>
+    </div>
+    <div class="pipe-connector"></div>
+
+    <div class="pipe-step">
+      <div class="pipe-circle c3">4</div>
+      <div class="pipe-label">Plan</div>
+      <div class="pipe-sub">TL ✓</div>
     </div>
     <div class="pipe-connector"></div>
 
@@ -652,7 +652,7 @@
     <div class="pipe-step">
       <div class="pipe-circle c6">6</div>
       <div class="pipe-label">Legacy Check</div>
-      <div class="pipe-sub">Kristijan</div>
+      <div class="pipe-sub">TL</div>
     </div>
     <div class="pipe-connector"></div>
 
@@ -669,9 +669,9 @@
     <span class="doc-arrow">→</span>
     <span class="doc-pill dp2">spec.md</span>
     <span class="doc-arrow">→</span>
-    <span class="doc-pill dp3">plan.md</span>
-    <span class="doc-arrow">→</span>
     <span class="doc-pill dp4">prototype-design branch</span>
+    <span class="doc-arrow">→</span>
+    <span class="doc-pill dp3">plan.md</span>
     <span class="doc-arrow">→</span>
     <span class="doc-pill dp5">tasks.md</span>
     <span class="doc-arrow">→</span>
@@ -683,23 +683,22 @@
 
     <div class="p-card">
       <div class="p-tag"><span class="num">1</span> Analyze</div>
-      <p>Emina and Kristijan read the MudTrax codebase and extract business rules and architecture. Each item is tagged <strong>Keep / Skip / Merge</strong> before anything moves forward.</p>
+      <p>PM and TL read the MudTrax codebase and extract business rules and architecture. Each item is tagged <strong>Keep / Skip / Merge</strong> before anything moves forward.</p>
     </div>
 
     <div class="p-card">
       <div class="p-tag"><span class="num">2</span> Specify</div>
-      <p>Emina describes the feature in plain language. The tool generates a formal spec with acceptance criteria and field definitions. Emina reviews and approves before anything else starts.</p>
-    </div>
-
-    <div class="p-card">
-      <div class="p-tag"><span class="num">3</span> Plan</div>
-      <p>Kristijan turns the approved spec into a technical plan — component structure, API endpoints, database changes, and team dependencies. He approves it before dev starts.</p>
+      <p>PM describes the feature in plain language. The tool generates a formal spec with acceptance criteria and field definitions. PM reviews and approves before anything else starts.</p>
     </div>
 
     <div class="p-card designer-card">
-      <div class="designer-note">🎨 Designer</div>
-      <div class="p-tag"><span class="num">4</span> Design</div>
-      <p>The designer analyses the spec, identifies what needs to change visually, and runs design discovery for complex features. Screens and component concepts are built directly in code on the <code>prototype-design</code> branch, presented and iterated with the UpSwell client until approved. Dev then reviews and implements from that branch.</p>
+      <div class="p-tag"><span class="num">3</span> Design</div>
+      <p>The designer analyses the spec, identifies what needs to change visually, and runs design discovery for complex features. Prototypes are built directly in code on the <code>prototype-design</code> branch, presented and iterated with the UpSwell client until approved. Dev then reviews and implements from that branch.</p>
+    </div>
+
+    <div class="p-card">
+      <div class="p-tag"><span class="num">4</span> Plan</div>
+      <p>TL turns the approved spec into a technical plan — component structure, API endpoints, database changes, and team dependencies. He approves it before dev starts.</p>
     </div>
 
     <div class="p-card">
@@ -709,7 +708,7 @@
 
     <div class="p-card">
       <div class="p-tag"><span class="num">6</span> Legacy Check</div>
-      <p>Kristijan runs a post-build check comparing the implementation against every acceptance criterion. If more than 30% are missing, the feature is automatically escalated before QA begins.</p>
+      <p>TL runs a post-build check comparing the implementation against every acceptance criterion. If more than 30% are missing, the feature is automatically escalated before QA begins.</p>
     </div>
 
     <div class="p-card">
